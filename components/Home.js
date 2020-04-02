@@ -5,7 +5,7 @@ import styles from "./Home.module.css"
 function Home() {
   return (
     <div className={styles.hero}>
-      <img src="/logo.png" className={styles.logo} />
+      <img src="/logo.png" className={styles.logo} alt="Kurt's logo" />
 
       <div className={styles.nameTitle}>
         <h1 className={styles.name}>Kurt Obispo</h1>

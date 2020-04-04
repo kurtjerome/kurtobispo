@@ -1,3 +1,5 @@
+const contentful = require("contentful")
+
 import Works from "../../components/Works"
 
 function WorksPage({ works }) {
@@ -7,7 +9,7 @@ function WorksPage({ works }) {
 export default WorksPage
 
 export async function getStaticProps(_context) {
-  const client = require("contentful").createClient({
+  const client = contentful.createClient({
     space: process.env.contentfulSpaceId,
     accessToken: process.env.contentfulAccessToken,
   })

@@ -16,9 +16,7 @@ export async function getStaticPaths() {
     content_type: "work",
   })
 
-  const paths = entries.items.map((entry) => ({
-    params: { slug: entry.fields.slug },
-  }))
+  const paths = entries.items.map((entry) => `/works/${entry.fields.slug}`)
 
   return { paths, fallback: false }
 }

@@ -20,7 +20,7 @@ function Works({ works }) {
         {works.map((work) => (
           <div key={work.slug} className={styles.work}>
             <h3>
-              <Link href={`/works/${work.slug}`}>
+              <Link href="/works/[slug]" as={`/works/${work.slug}`}>
                 <a className={styles.name}>{work.name}</a>
               </Link>
             </h3>

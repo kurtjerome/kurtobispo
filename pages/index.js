@@ -1,16 +1,16 @@
 import Head from "next/head"
 
-import Hero from "../components/Home"
+import Home from "../components/Home"
 
-function Home() {
+function HomePage() {
   return (
     <>
       <Head>
         <title>Kurt Obispo</title>
       </Head>
-      <Hero />
+      <Home />
     </>
   )
 }
 
-export default Home
+export default HomePage

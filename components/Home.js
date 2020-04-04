@@ -21,7 +21,7 @@ function Home() {
       </p>
 
       <div>
-        <Link href="/work">
+        <Link href="/works">
           <a className={styles.work}>Look at my work &rarr;</a>
         </Link>
         <Link href="/contact">

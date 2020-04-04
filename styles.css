@@ -34,6 +34,13 @@ body {
   direction: ltr;
   font-feature-settings: "kern";
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 input,

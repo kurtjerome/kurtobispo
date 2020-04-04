@@ -17,16 +17,28 @@ function Works({ works }) {
           alert, I love using <strong>React</strong> and{" "}
           <strong>GraphQL</strong>.
         </p>
-        {works.map((work) => (
-          <div key={work.slug} className={styles.work}>
-            <h3>
+        <div className={styles.grid}>
+          {works.map((work) => (
+            <div key={work.slug} className={styles.work}>
               <Link href="/works/[slug]" as={`/works/${work.slug}`}>
-                <a className={styles.name}>{work.name}</a>
+                <a className={styles.coverLink}>
+                  <img
+                    src={`${work.cover.url}?fm=jpg&w=816`}
+                    alt={work.cover.title}
+                    className={styles.cover}
+                    loading="lazy"
+                  />
+                </a>
               </Link>
-            </h3>
-            <p className={styles.tech}>{work.tech.join(", ")}</p>
-          </div>
-        ))}
+              <h3>
+                <Link href="/works/[slug]" as={`/works/${work.slug}`}>
+                  <a className={styles.name}>{work.name}</a>
+                </Link>
+              </h3>
+              <p className={styles.tech}>{work.tech.join(", ")}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   )

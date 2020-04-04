@@ -29,7 +29,7 @@ export async function getStaticProps({ params }) {
 
   const works = await client.getEntries({
     content_type: "work",
-    "fields.slug[in]": params.slug,
+    "fields.slug": params.slug,
   })
 
   const work = {

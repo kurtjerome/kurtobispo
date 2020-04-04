@@ -7,8 +7,6 @@
   grid-column: 2;
   margin: 1.5rem 0 0 8rem;
   width: 20rem;
-  position: relative;
-  top: -3.5rem;
 }
 
 .infoSticky {
@@ -94,7 +92,6 @@
 
   .info {
     width: auto;
-    position: static;
   }
 
   .infoSticky {

@@ -13,7 +13,7 @@
 
 .infoSticky {
   position: sticky;
-  top: 66px;
+  top: 4.125rem;
 }
 
 .worksLink {
@@ -44,7 +44,6 @@
 }
 
 .visit:hover {
-  /* color: inherit; */
   text-decoration: underline;
 }
 
@@ -95,6 +94,11 @@
 
   .info {
     width: auto;
+    position: static;
+  }
+
+  .infoSticky {
+    position: static;
   }
 
   .content {

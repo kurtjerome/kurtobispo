@@ -1,19 +1,14 @@
 .hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
   padding: 8rem;
-  justify-content: space-between;
 }
 
 .logo {
   width: 34px;
-  align-self: flex-start;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
 .nameTitle {
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
 .name {
@@ -30,9 +25,9 @@
 .spiel {
   font-size: 1.25rem;
   font-weight: 300;
-  max-width: 600px;
+  max-width: 50ch;
   line-height: 1.5em;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
 .work {

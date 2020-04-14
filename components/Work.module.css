@@ -12,6 +12,7 @@
 .infoSticky {
   position: sticky;
   top: 4.125rem;
+  padding-bottom: 2rem;
 }
 
 .worksLink {
@@ -70,7 +71,7 @@
   font-weight: 300;
   line-height: 1.5em;
   letter-spacing: -0.02em;
-  padding: 0 0 8rem;
+  padding-bottom: 2rem;
 }
 
 .content > * {
@@ -83,6 +84,62 @@
 
 .content img {
   grid-column: 1/4;
+}
+
+.otherWorks {
+  padding: 8rem;
+  background-color: #fafafb;
+}
+
+.checkOut {
+  margin-bottom: 2rem;
+  color: #696f81;
+}
+
+.beforeAfter {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.otherWork {
+  max-width: 25rem;
+}
+
+.otherWork:first-of-type {
+  margin-right: 4rem;
+}
+
+.otherCoverLink {
+  overflow: hidden;
+  display: block;
+}
+
+.otherCover {
+  height: 17.5rem;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.otherCover:hover {
+  transform: scale(1.03);
+}
+
+.otherName {
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+  display: inline-block;
+  margin-top: 1.5rem;
+}
+
+.otherName:hover {
+  color: #1e69ff;
+}
+
+.otherTech {
+  color: #696f81;
 }
 
 @media (max-width: 1080px) {
@@ -117,6 +174,14 @@
       minmax(auto, 57ch)
       minmax(2rem, 1fr);
   }
+
+  .otherWorks {
+    padding: 4rem;
+  }
+
+  .otherWork:first-of-type {
+    margin-right: 2rem;
+  }
 }
 
 @media (max-width: 640px) {
@@ -129,5 +194,26 @@
       2rem
       minmax(auto, 57ch)
       minmax(2rem, 1fr);
+  }
+
+  .otherWorks {
+    padding: 2rem;
+  }
+
+  .beforeAfter {
+    flex-direction: column;
+  }
+
+  .otherWork {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .otherWork:first-of-type {
+    margin-right: 0;
+  }
+
+  .otherCover {
+    width: 100%;
   }
 }

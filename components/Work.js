@@ -6,7 +6,7 @@ import { BLOCKS } from "@contentful/rich-text-types"
 import Header from "./Header"
 import styles from "./Work.module.css"
 
-function Work({ work }) {
+function Work({ work, before, after }) {
   const rendered = documentToReactComponents(work.content, options)
 
   return (
@@ -41,7 +41,37 @@ function Work({ work }) {
         </div>
         <div className={styles.content}>{rendered}</div>
       </div>
+      <div className={styles.otherWorks}>
+        <p className={styles.checkOut}>Check out my other projects</p>
+        <div className={styles.beforeAfter}>
+          {before && <OtherWork work={before} />}
+          {after && <OtherWork work={after} />}
+        </div>
+      </div>
     </>
+  )
+}
+
+function OtherWork({ work }) {
+  return (
+    <div className={styles.otherWork}>
+      <Link href="/works/[slug]" as={`/works/${work.slug}`}>
+        <a className={styles.otherCoverLink}>
+          <img
+            src={`${work.cover.url}?fm=jpg&w=800`}
+            alt={work.cover.title}
+            className={styles.otherCover}
+            loading="lazy"
+          />
+        </a>
+      </Link>
+      <h3>
+        <Link href="/works/[slug]" as={`/works/${work.slug}`}>
+          <a className={styles.otherName}>{work.name}</a>
+        </Link>
+      </h3>
+      <p className={styles.otherTech}>{work.tech.join(", ")}</p>
+    </div>
   )
 }
 

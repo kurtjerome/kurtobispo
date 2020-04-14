@@ -16,7 +16,7 @@ function Home() {
         I’m a web developer with 7 years of experience building web apps with{" "}
         <strong>React</strong>, <strong>Node</strong>, and <strong>PHP</strong>.
         Lately, I’ve been focusing on frontend development using{" "}
-        <strong>Gatsby</strong>, <strong>Next.js</strong> and{" "}
+        <strong>Gatsby</strong>, <strong>Next.js</strong>, and{" "}
         <strong>GraphQL</strong>.
       </p>
 

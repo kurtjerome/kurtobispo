@@ -48,3 +48,13 @@ textarea,
 select {
   font: inherit;
 }
+
+b,
+strong {
+  font-weight: 700;
+}
+
+::selection {
+  color: #fff;
+  background-color: #1e69ff;
+}

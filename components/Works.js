@@ -4,11 +4,22 @@ import Link from "next/link"
 import Header from "./Header"
 import styles from "./Works.module.css"
 
+import getOgImage from "../utils/getOgImage"
+
 function Works({ works }) {
+  const ogImage = getOgImage(`My **Projects**`)
+
   return (
     <>
       <Head>
         <title>Works | Kurt Obispo</title>
+        <meta property="og:title" key="og:title" content="Some of my Works" />
+        <meta
+          property="og:description"
+          key="og:description"
+          content="A selection of my projects focused on web development, React, and GraphQL"
+        />
+        <meta property="og:image" key="og:image" content={ogImage} />
       </Head>
       <Header />
       <div className={styles.works}>

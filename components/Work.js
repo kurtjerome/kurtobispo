@@ -16,8 +16,8 @@ function Work({ work, before, after }) {
     <>
       <Head>
         <title>{work.name} | Kurt Obispo</title>
-        <meta property="og:title" content={work.name} />
-        <meta property="og:image" content={ogImage} />
+        <meta property="og:title" key="og:title" content={work.name} />
+        <meta property="og:image" key="og:image" content={ogImage} />
       </Head>
       <Header />
       <div className={styles.work}>

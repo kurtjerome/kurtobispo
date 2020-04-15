@@ -6,13 +6,18 @@ import { BLOCKS } from "@contentful/rich-text-types"
 import Header from "./Header"
 import styles from "./Work.module.css"
 
+import getOgImage from "../utils/getOgImage"
+
 function Work({ work, before, after }) {
   const rendered = documentToReactComponents(work.content, options)
+  const ogImage = getOgImage(`Works — **${work.name}**`)
 
   return (
     <>
       <Head>
         <title>{work.name} | Kurt Obispo</title>
+        <meta property="og:title" content={work.name} />
+        <meta property="og:image" content={ogImage} />
       </Head>
       <Header />
       <div className={styles.work}>
